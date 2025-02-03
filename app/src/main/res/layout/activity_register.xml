@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <!-- Background image -->
+    <ImageView
+        android:id="@+id/back1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="Register background"
+        app:srcCompat="@drawable/back" />
+    <ImageView
+        android:id="@+id/back2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+
+        android:contentDescription="Register background"
+        app:srcCompat="@drawable/registertoplay" />
+
+    <!-- Title TextView for "Register to play!" -->
+    <TextView
+        android:id="@+id/registerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="#1E3799"
+        android:fontFamily="cursive"
+        android:layout_marginTop="180dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Container for input fields -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#FFFFFF"
+        android:alpha="0.9"
+        app:layout_constraintTop_toBottomOf="@id/registerTitle"
+        android:layout_marginTop="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Name input field -->
+            <EditText
+                android:id="@+id/inputName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your name"
+                android:textSize="16sp"
+                android:inputType="textPersonName"
+                android:padding="16dp"
+                android:background="@drawable/input_background"
+                android:elevation="2dp"
+                android:textColorHint="#757575"/>
+
+            <!-- Email input field -->
+            <EditText
+                android:id="@+id/inputEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your email"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"
+                android:background="@drawable/input_background"
+                android:elevation="2dp"
+                android:textColorHint="#757575"/>
+
+            <!-- Password input field -->
+            <EditText
+                android:id="@+id/inputPasswordRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your password"
+                android:inputType="textPassword"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"
+                android:background="@drawable/input_background"
+                android:elevation="2dp"
+                android:textColorHint="#757575"/>
+
+            <!-- Repeat Password input field -->
+            <EditText
+                android:id="@+id/inputPasswordRepeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Repeat your password"
+                android:inputType="textPassword"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"
+                android:background="@drawable/input_background"
+                android:elevation="2dp"
+                android:textColorHint="#757575"/>
+
+            <!-- Register button -->
+            <Button
+                android:id="@+id/registerButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="REGISTER"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:padding="16dp"
+                android:backgroundTint="#6C5CE7"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Login TextView -->
+    <TextView
+        android:id="@+id/loginTextViewClickable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="goToLogin"
+        android:text="Already have an account? Login"
+        android:textColor="#1E3799"
+        android:textStyle="bold"
+        android:background="@drawable/register_text_background"
+        android:padding="12dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:clickable="true"
+        android:focusable="true"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

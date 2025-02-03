@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/artColor" />
+    <!-- Wybierz kolor przycisku -->
+    <corners android:radius="16dp" /> <!-- Zwiększ wartość, aby uzyskać bardziej zaokrąglone rogi -->
+</shape>

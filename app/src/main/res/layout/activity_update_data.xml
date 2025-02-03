@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".UpdateDataActivity">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Update Your Details"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#1E3799"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Profile Image -->
+    <ImageView
+        android:id="@+id/profileImageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Profile Picture"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        app:srcCompat="@drawable/default_profile" />
+
+    <!-- Container for input fields -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#FFFFFF"
+        android:alpha="0.9"
+        app:layout_constraintTop_toBottomOf="@id/profileImageView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Name input field -->
+            <EditText
+                android:id="@+id/nameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:textSize="16sp"
+                android:padding="14dp"
+                android:background="@drawable/input_background"
+                android:elevation="2dp"
+                android:textColorHint="#757575"/>
+
+            <!-- Email input field (disabled) -->
+            <EditText
+                android:id="@+id/emailInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:enabled="false"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="16dp"
+                android:padding="14dp"
+                android:background="@drawable/input_background"
+                android:elevation="2dp"
+                android:textColorHint="#757575"/>
+
+            <!-- Date of Birth button -->
+            <Button
+                android:id="@+id/dobButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Date of Birth"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:padding="14dp"
+                android:backgroundTint="#6C5CE7"
+                android:textColor="#FFFFFF"/>
+
+            <!-- Selected Date TextView -->
+            <TextView
+                android:id="@+id/dobText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selected Date: "
+                android:textColor="#1E3799"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <!-- Phone Number input field -->
+            <EditText
+                android:id="@+id/phoneInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:layout_marginTop="16dp"
+                android:padding="14dp"
+                android:background="@drawable/input_background"
+                android:elevation="2dp"
+                android:textColorHint="#757575"/>
+
+            <!-- Address input field -->
+            <EditText
+                android:id="@+id/addressInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address (City, Street, Postcode)"
+                android:layout_marginTop="16dp"
+                android:padding="14dp"
+                android:background="@drawable/input_background"
+                android:elevation="2dp"
+                android:textColorHint="#757575"/>
+
+            <!-- Interests input field -->
+            <EditText
+                android:id="@+id/interestsInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Interests (comma-separated)"
+                android:layout_marginTop="16dp"
+                android:padding="14dp"
+                android:background="@drawable/input_background"
+                android:elevation="2dp"
+                android:textColorHint="#757575"/>
+
+            <!-- Buttons for Update and Cancel -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/cancelButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cancel"
+                    android:textStyle="bold"
+                    android:padding="14dp"
+                    android:backgroundTint="#B0BEC5"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/submitButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Update Data"
+                    android:textStyle="bold"
+                    android:padding="14dp"
+                    android:backgroundTint="#6C5CE7"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

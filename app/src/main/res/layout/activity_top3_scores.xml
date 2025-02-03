@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@drawable/top3results">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/topScoresTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#1E3799"
+        android:fontFamily="cursive"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Category TextView -->
+    <TextView
+        android:id="@+id/categoryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#636e72"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Container for Scores -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="200dp"
+        android:alpha="0.9">
+
+        <ListView
+            android:id="@+id/topScoresListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp"
+            android:padding="8dp"
+            android:textSize="18sp" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textStyle="bold"
+        android:backgroundTint="#6C5CE7"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"/>
+</LinearLayout>

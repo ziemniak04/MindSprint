@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/answer"
+    android:gravity="center_vertical">
+
+    <!-- Pytanie -->
+    <TextView
+        android:id="@+id/questionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pytanie"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/progressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question 1 of 15"
+        android:layout_marginTop="16dp"
+        />
+
+    <!-- Pojemnik na przyciski -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Odpowiedzi -->
+        <Button
+            android:id="@+id/answerButton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Odpowiedź 1"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_button"/>
+
+        <Button
+            android:id="@+id/answerButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Odpowiedź 2"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_button" />
+
+        <Button
+            android:id="@+id/answerButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Odpowiedź 3"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_button" />
+
+        <Button
+            android:id="@+id/answerButton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Odpowiedź 4"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_button" />
+
+    </LinearLayout>
+
+</LinearLayout>
